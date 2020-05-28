@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VerificationAuth">
+
+    <ImageView
+        android:id="@+id/pict"
+        android:src="@drawable/verifikasi"
+        android:layout_marginTop="70dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="200dp"
+        android:layout_height="180dp">
+
+    </ImageView>
+
+    <TextView
+        android:id="@+id/text1"
+        android:text="Kode Verifikasi Sudah Dikirim !"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/hitam"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:layout_below="@+id/pict"
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </TextView>
+
+    <TextView
+        android:layout_below="@+id/text1"
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/hitam"
+        android:text="Masukkan Kode yng kami SMS ke nomor HP-mu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </TextView>
+
+
+        <EditText
+            android:id="@+id/verification"
+            android:paddingLeft="50dp"
+            android:inputType="number"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:paddingRight="50dp"
+            android:layout_centerVertical="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </EditText>
+
+        <Button
+            android:id="@+id/buttonverification"
+            android:text="LANJUT"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_marginTop="200dp"
+            android:textColor="@color/white"
+            android:background="@color/green"
+            android:layout_below="@+id/verification"
+            android:layout_centerHorizontal="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </Button>
+
+
+
+</RelativeLayout>

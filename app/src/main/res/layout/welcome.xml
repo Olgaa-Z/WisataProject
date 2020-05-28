@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Welcome">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:src="@drawable/iconlogo"
+            android:layout_width="60dp"
+            android:layout_height="80dp">
+        </ImageView>
+
+        <TextView
+            android:text="WISATA"
+            android:layout_gravity="center_vertical"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:textColor="@color/hitam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </TextView>
+
+        <ImageView
+            android:src="@drawable/id"
+            android:layout_marginLeft="120dp"
+            android:layout_gravity="center_vertical"
+            android:layout_width="45dp"
+            android:layout_height="33dp">
+        </ImageView>
+
+    </LinearLayout>
+
+
+
+    <ImageView
+        android:id="@+id/hello"
+        android:layout_width="240dp"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/hello">
+    </ImageView>
+
+    <TextView
+        android:id="@+id/textwelcome"
+        android:layout_below="@+id/hello"
+        android:text="Selamat Datang !"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:textColor="@color/hitam"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </TextView>
+
+    <LinearLayout
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal"
+        android:layout_below="@+id/textwelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/masuk"
+            android:text="Masuk"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:background="@color/green"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content">
+        </Button>
+
+        <Button
+            android:id="@+id/daftar"
+            android:text="Daftar"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_marginLeft="40dp"
+            android:background="@color/green"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content">
+        </Button>
+    </LinearLayout>
+
+</RelativeLayout>
