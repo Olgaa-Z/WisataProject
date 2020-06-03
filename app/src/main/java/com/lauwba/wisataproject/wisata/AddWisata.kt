@@ -137,7 +137,7 @@ class AddWisata : CameraFilePickerBaseActivity(){
         val imageMapsStatic = "https://maps.googleapis.com/maps/api/" +
                 "staticmap?zoom=15&" +
                 "size=2000x320&" +
-                "markers=icon:http://illegal-trade.server411.tech/assets/map-marker-alt-solid.svg" +
+                "markers=icon:https://illegal-trade.server411.tech/assets/map-marker-alt-solid.svg" +
                 "|$latitude,$longitude&" +
                 "key=$key"
         Glide.with(this)

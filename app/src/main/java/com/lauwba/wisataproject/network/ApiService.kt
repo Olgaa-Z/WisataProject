@@ -54,4 +54,13 @@ interface ApiService {
         @Part ("notelp") notelp: RequestBody
         ): retrofit2.Call<ResponseUpload>
 
+    @Multipart
+    @POST("Register/doRegister")
+    fun doRegister(
+        @Field("notelp") noTelp : String?,
+        @Field("nama") nama : String?,
+        @Field("email") email : String?,
+        @Field("alamat") alamat : String?
+    ): retrofit2.Call<ResponseUpload>
+
 }
