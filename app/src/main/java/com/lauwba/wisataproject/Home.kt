@@ -14,6 +14,7 @@ import com.lauwba.wisataproject.datamodel.listbank.ResponseListBank
 import com.lauwba.wisataproject.network.NetworkModule
 import com.lauwba.wisataproject.saldo.ResponseSaldo
 import kotlinx.android.synthetic.main.activity_list_bank.*
+import kotlinx.android.synthetic.main.home.*
 import kotlinx.android.synthetic.main.menu_saldo.*
 import retrofit2.Call
 import retrofit2.Response
@@ -25,12 +26,21 @@ class Home : Fragment() {
         val view = inflater.inflate(R.layout.home, container, false)
         return view
 
-
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         getSaldo("FSSnC6UKtwXtrzgDf8nozC8pHhYZfluoYHrt3v4ixdQuZBBRo5")
+        btnwisatalaam.setOnClickListener {
+            var i: Intent
+            i= Intent(activity, Menu::class.java)
+            activity?.startActivity(i)
+        }
+        btncekharga.setOnClickListener {
+            var i: Intent
+            i= Intent(activity, Menu::class.java)
+            activity?.startActivity(i)
+        }
     }
 
     private fun getSaldo(key: String) {

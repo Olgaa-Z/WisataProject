@@ -56,6 +56,7 @@ class ExoVideoPlayer : AppCompatActivity() {
         if(mPlayer == null){
             return
         }
+
         mCurrentMilis = mPlayer?.currentPosition
         mPlayer?.release()
         mPlayer = null

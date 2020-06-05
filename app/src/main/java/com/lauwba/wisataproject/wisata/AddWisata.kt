@@ -91,6 +91,7 @@ class AddWisata : CameraFilePickerBaseActivity(){
             lat = lat,
             lon = lon,
             notelp = notelp
+
         ).enqueue(object : retrofit2.Callback<ResponseUpload>{
             override fun onFailure(call: Call<ResponseUpload>, t: Throwable) {
                 Toast.makeText(this@AddWisata,"Upload Gagal !", Toast.LENGTH_SHORT).show()

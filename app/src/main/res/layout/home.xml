@@ -14,10 +14,219 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <LinearLayout
-            android:orientation="vertical"
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card"
+            android:clipToPadding="true"
+            android:background="@color/white"
+            app:cardCornerRadius="20dp"
+            android:elevation="2dp"
+            android:layout_marginTop="10dp"
+            app:cardBackgroundColor="@color/white"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="170dp">
+
+            <LinearLayout
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:weightSum="4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:id="@+id/btnwisatalaam"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="15dp"
+                            android:src="@drawable/booking"
+                            android:text="Category">
+                        </ImageView>
+                        <TextView
+                            android:text="Wisata Alam"
+                            android:textColor="@color/hitam"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                        </TextView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:id="@+id/btnbooking"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="15dp"
+                            android:src="@drawable/booking"
+                            android:text="Category">
+                        </ImageView>
+                        <TextView
+                            android:text="Booking"
+                            android:layout_gravity="center_horizontal"
+                            android:textColor="@color/hitam"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                        </TextView>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:id="@+id/btncekharga"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="15dp"
+                            android:src="@drawable/booking"
+                            android:text="Category">
+                        </ImageView>
+                        <TextView
+                            android:text="Cek Harga"
+                            android:layout_gravity="center_horizontal"
+                            android:textColor="@color/hitam"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                        </TextView>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:id="@+id/btnpaketwisata"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="15dp"
+                            android:src="@drawable/booking">
+                        </ImageView>
+                        <TextView
+                            android:text="Paket Wisata"
+                            android:layout_gravity="center_horizontal"
+                            android:textColor="@color/hitam"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                        </TextView>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:weightSum="4"
+                    android:paddingBottom="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:id="@+id/btnoutdooractivity"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="15dp"
+                            android:src="@drawable/booking">
+                        </ImageView>
+                        <TextView
+                            android:text="Outdoor Activity"
+                            android:gravity="center"
+                            android:textColor="@color/hitam"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                        </TextView>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:id="@+id/btnpayment"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="15dp"
+                            android:src="@drawable/booking">
+                        </ImageView>
+                        <TextView
+                            android:text="Payment"
+                            android:layout_gravity="center_horizontal"
+                            android:textColor="@color/hitam"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                        </TextView>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:id="@+id/btnhistory"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="15dp"
+                            android:src="@drawable/booking">
+                        </ImageView>
+                        <TextView
+                            android:text="History"
+                            android:layout_gravity="center_horizontal"
+                            android:textColor="@color/hitam"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                        </TextView>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:id="@+id/btnpromowisata"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="15dp"
+                            android:src="@drawable/booking">
+                        </ImageView>
+                        <TextView
+                            android:text="Promo Wisata"
+                            android:gravity="center"
+                            android:textColor="@color/hitam"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                        </TextView>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
 <!--            <include layout="@layout/menu_galeri_pilihan" />-->
 
@@ -29,8 +238,6 @@
 
 <!--            <include layout="@layout/menu_referensi_wisata" />-->
 
-
-        </LinearLayout>
 
     </androidx.core.widget.NestedScrollView>
 
