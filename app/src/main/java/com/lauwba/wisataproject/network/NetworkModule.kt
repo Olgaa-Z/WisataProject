@@ -8,7 +8,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object NetworkModule {
 
-    const val BASE_URL = "http://192.168.18.38/wisata/index.php/"
+    const val BASE_URL = "http://192.168.18.8/CodeIgniter/WisataProjectWeb/index.php/"
 
     fun getOkHttp(): OkHttpClient {
         val logging = HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BASIC)
@@ -27,6 +27,6 @@ object NetworkModule {
     }
 
     fun getService(): ApiService {
-        return getRetrofit().create<ApiService>(ApiService::class.java)
+        return getRetrofit().create(ApiService::class.java)
     }
 }

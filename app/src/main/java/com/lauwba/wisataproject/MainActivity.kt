@@ -1,21 +1,23 @@
 package com.lauwba.wisataproject
 
 import android.app.AlertDialog
+import android.content.ContextWrapper
 import android.content.DialogInterface
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import androidx.core.content.edit
+import com.lauwba.wisataproject.datamodel.user.DataItemUser
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
     internal lateinit var toolbar: Toolbar
     lateinit var fav: MenuItem
-
+    private var dataItemUser: DataItemUser? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -24,24 +26,54 @@ class MainActivity : AppCompatActivity() {
 
 //        toolbars.title = ""
 //        setSupportActionBar(toolbars)
+        if (!getSharedPreferences(Constant.PREFS_NAME, ContextWrapper.MODE_PRIVATE).contains(
+                Constant.NO_TELP
+            )
+        ) {
+            dataItemUser = intent.getSerializableExtra("data") as DataItemUser
+            if (dataItemUser != null) {
+                getSharedPreferences(Constant.PREFS_NAME, ContextWrapper.MODE_PRIVATE)
+                    .edit {
+                        putString(Constant.NAMA, dataItemUser?.nama)
+                        putString(Constant.ALAMAT, dataItemUser?.alamat)
+                        putString(Constant.NO_TELP, dataItemUser?.notelp)
+                        putString(Constant.EMAIL, dataItemUser?.email)
+                    }
+                supportFragmentManager.beginTransaction()
+                    .replace(R.id.coordinatorLayout, Akun())
+                    .commit()
+                bottom.selectedItemId = R.id.navigation_akun
+            }
+        } else {
+            supportFragmentManager.beginTransaction()
+                .replace(R.id.coordinatorLayout, Home())
+                .commit()
+        }
 
-        supportFragmentManager.beginTransaction()
-            .replace(com.lauwba.wisataproject.R.id.coordinatorLayout, Home())
-            .commit()
+        //cara ambil value dari session/sharedpref
+        //ini contoh untuk ambil alamat
+//        getSharedPreferences(Constant.PREFS_NAME, ContextWrapper.MODE_PRIVATE)
+//            .getString(Constant.ALAMAT, "not set")
+
+        //cara logout
+//        getSharedPreferences(Constant.PREFS_NAME, ContextWrapper.MODE_PRIVATE)
+//            .edit {
+//                clear()
+//            }
 
 
         bottom.setOnNavigationItemSelectedListener {
             when (it.itemId) {
                 com.lauwba.wisataproject.R.id.navigation_home -> {
                     supportFragmentManager.beginTransaction()
-                        .replace(com.lauwba.wisataproject.R.id.coordinatorLayout, Home())
+                        .replace(R.id.coordinatorLayout, Home())
                         .commit()
                     return@setOnNavigationItemSelectedListener true
                 }
 
                 com.lauwba.wisataproject.R.id.navigation_pesanan -> {
                     supportFragmentManager.beginTransaction()
-                        .replace(com.lauwba.wisataproject.R.id.coordinatorLayout, Pesanan())
+                        .replace(R.id.coordinatorLayout, Pesanan())
                         .commit()
 //                    intent = Intent(applicationContext, Help::class.java)
 //                    startActivity(intent)
@@ -50,14 +82,14 @@ class MainActivity : AppCompatActivity() {
 
                 com.lauwba.wisataproject.R.id.navigation_inbox -> {
                     supportFragmentManager.beginTransaction()
-                        .replace(com.lauwba.wisataproject.R.id.coordinatorLayout, Inbox())
+                        .replace(R.id.coordinatorLayout, Inbox())
                         .commit()
                     return@setOnNavigationItemSelectedListener true
                 }
 
                 com.lauwba.wisataproject.R.id.navigation_akun -> {
                     supportFragmentManager.beginTransaction()
-                        .replace(com.lauwba.wisataproject.R.id.coordinatorLayout, Akun())
+                        .replace(R.id.coordinatorLayout, Akun())
                         .commit()
                     return@setOnNavigationItemSelectedListener true
                 }
@@ -76,7 +108,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
 //        intent = Intent(applicationContext, Cart::class.java)
-        when(item.getItemId()){
+        when (item.itemId) {
             R.id.menu_settings -> {
                 Toast.makeText(applicationContext, "Feature is locked", Toast.LENGTH_LONG).show()
             }

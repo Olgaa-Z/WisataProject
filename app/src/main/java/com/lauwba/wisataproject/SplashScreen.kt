@@ -1,10 +1,11 @@
 package com.lauwba.wisataproject
 
+import android.content.ContextWrapper
 import android.content.Intent
 import android.content.pm.ActivityInfo
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import androidx.appcompat.app.AppCompatActivity
 
 class SplashScreen : AppCompatActivity() {
 
@@ -18,9 +19,16 @@ class SplashScreen : AppCompatActivity() {
         handler = Handler()
 
         handler.postDelayed(Runnable {
-            var intent = intent
-            intent = Intent(this@SplashScreen, Welcome::class.java)
-            startActivity(intent)
+            if (getSharedPreferences(Constant.PREFS_NAME, ContextWrapper.MODE_PRIVATE).contains(
+                    Constant.NO_TELP
+                )
+            ) {
+                startActivity(Intent(this@SplashScreen, MainActivity::class.java))
+            } else {
+                var intent = intent
+                intent = Intent(this@SplashScreen, Welcome::class.java)
+                startActivity(intent)
+            }
             this@SplashScreen.finish()
         }, 2000)
     }

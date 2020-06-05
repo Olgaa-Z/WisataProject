@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "364865057740-so8its0ba7ov6vff45gcec46llbqs8fv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.lauwba.wisataproject",
+            "certificate_hash": "a812dc1a36f6b565b15574d77e2210a8fda60991"
+          }
+        },
+        {
           "client_id": "364865057740-8sq0equr388chkhvvsge2rd8vud1guc1.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {

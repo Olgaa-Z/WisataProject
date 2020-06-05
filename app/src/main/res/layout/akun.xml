@@ -9,51 +9,49 @@
 
 
     <androidx.cardview.widget.CardView
-        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/holder"
         android:layout_width="match_parent"
+        android:layout_height="100dp"
         android:layout_gravity="center"
         android:background="@color/colorPrimary"
-        app:cardBackgroundColor="@color/colorPrimary"
-        android:layout_height="100dp"
-        android:id="@+id/holder"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        app:cardBackgroundColor="@color/colorPrimary">
 
         <ImageView
-            android:layout_marginRight="270dp"
-            android:src="@drawable/ic_face"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginRight="270dp"
+            android:src="@drawable/ic_face">
 
         </ImageView>
 
         <TextView
             android:id="@+id/nama"
-            android:text="Nama User"
-            android:layout_marginLeft="170dp"
-            android:textSize="24dp"
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            android:layout_marginTop="30dp"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:layout_marginStart="170dp"
+            android:layout_marginTop="30dp"
+            android:text="Nama User"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
 
 
     </androidx.cardview.widget.CardView>
 
 
     <androidx.cardview.widget.CardView
-        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/cvisisaldo"
         android:layout_width="120dp"
         android:layout_height="40dp"
+        android:layout_marginStart="35dp"
         android:layout_marginTop="10dp"
-        app:cardBackgroundColor="@color/white"
-        android:id="@+id/cvisisaldo"
-        app:cardCornerRadius="25dp"
-        android:elevation="5dp"
+        android:layout_marginEnd="15dp"
         android:layout_marginBottom="5dp"
-        android:layout_marginLeft="35dp"
-        android:layout_marginRight="15dp"
-        android:orientation="horizontal">
+        android:elevation="5dp"
+        android:orientation="horizontal"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="25dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -62,14 +60,14 @@
 
             <TextView
                 android:id="@+id/mutasi"
-                android:textSize="15dp"
-                android:layout_gravity="center_vertical"
-                android:gravity="center_horizontal"
-                android:textStyle="bold"
-                android:textColor="@color/hitam"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Mutasi" />
+                android:layout_gravity="center_vertical"
+                android:gravity="center_horizontal"
+                android:text="Mutasi"
+                android:textColor="@color/hitam"
+                android:textSize="15sp"
+                android:textStyle="bold" />
 
         </LinearLayout>
 
@@ -77,31 +75,33 @@
 
     <TextView
         android:id="@+id/email"
-        android:text="email@gmail.com"
-        android:paddingLeft="20dp"
-        android:textSize="20dp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-    </TextView>
+        android:layout_height="wrap_content"
+        android:paddingStart="20dp"
+        android:text="email@gmail.com"
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/alamat"
-        android:text="Sleman, Depok"
-        android:paddingLeft="20dp"
-        android:textSize="20dp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-    </TextView>
+        android:layout_height="wrap_content"
+        android:paddingStart="20dp"
+        android:text="Sleman, Depok"
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/nohp"
-        android:text="085761990862"
-        android:paddingLeft="20dp"
-        android:textSize="20dp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-    </TextView>
+        android:layout_height="wrap_content"
+        android:paddingStart="20dp"
+        android:text="085761990862"
+        android:textSize="20sp" />
 
+    <Button
+        android:id="@+id/logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Keluar" />
 
 
 </LinearLayout>
