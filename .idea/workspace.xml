@@ -246,6 +246,10 @@
     </state>
     <state x="327" y="0" key="CommitChangelistDialog2/0.0.1360.728@0.0.1360.728" timestamp="1591330569422" />
     <state x="462" y="0" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1591339557707" />
+    <state x="460" y="86" key="FileChooserDialogImpl" timestamp="1591340636526">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state x="460" y="86" key="FileChooserDialogImpl/0.0.1360.728@0.0.1360.728" timestamp="1591340636526" />
     <state x="657" y="263" key="Github.CreateGistDialog" timestamp="1591328902369">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
