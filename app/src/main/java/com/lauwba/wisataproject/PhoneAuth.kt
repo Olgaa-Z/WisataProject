@@ -30,7 +30,7 @@ class PhoneAuth : AppCompatActivity() {
 
         buttonsend.setOnClickListener {
             if (notelp.text.toString().isEmpty()) {
-
+                ToastUtils.showToast(this@PhoneAuth, "Tidak boleh kosong")
             } else {
                 getDetailUser("${kodenegara.text}${notelp.text}")
             }
