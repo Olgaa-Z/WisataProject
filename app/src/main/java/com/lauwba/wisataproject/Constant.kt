@@ -6,4 +6,5 @@ object Constant {
     const val NAMA = "nama"
     const val ALAMAT = "alamat"
     const val NO_TELP = "nomorTelepon"
+    const val JUMLAH_SALDO = "saldo"
 }

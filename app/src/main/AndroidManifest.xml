@@ -20,7 +20,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".scanner.Scan"></activity>
         <activity android:name=".scanner.ScannerActivity" />
         <activity android:name=".gallery.Gallery" />
         <activity android:name=".gallery.DetailGallery" />
@@ -43,6 +42,7 @@
         <activity android:name=".AdapterListbank" />
         <activity android:name=".ListBank" />
         <activity android:name=".Mutasi" />
+        <activity android:name=".Menu" />
         <activity
             android:name=".SplashScreen"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />

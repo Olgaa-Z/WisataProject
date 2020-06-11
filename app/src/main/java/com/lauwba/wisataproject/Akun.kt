@@ -68,6 +68,12 @@ class Akun : Fragment() {
             }
         }
 
+        mutasi.setOnClickListener {
+            var i: Intent
+            i = Intent(activity, MutasiUser::class.java)
+            activity?.startActivity(i)
+        }
+
         logout.setOnClickListener {
 
             context?.getSharedPreferences(Constant.PREFS_NAME, ContextWrapper.MODE_PRIVATE)

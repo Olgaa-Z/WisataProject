@@ -8,27 +8,31 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.lauwba.wisataproject.network.NetworkModule
+import com.lauwba.wisataproject.saldo.IsiSaldo
 import com.lauwba.wisataproject.saldo.ResponseSaldo
+import kotlinx.android.synthetic.main.home.*
 import kotlinx.android.synthetic.main.menu_saldo.*
 import retrofit2.Call
 import retrofit2.Response
 
-class Home : Fragment(), View.OnClickListener {
+class Home : Fragment() {
 
-    override fun onClick(v: View?) {
-        when (v!!.id) {
-            R.id.btnwisatalaam -> {
-                var i: Intent
-                i = Intent(activity, Menu::class.java)
-                activity?.startActivity(i)
-            }
-            R.id.btnbooking -> {
-                var i: Intent
-                i = Intent(activity, Menu::class.java)
-                activity?.startActivity(i)
-            }
-        }
-    }
+
+//    , View.OnClickListener
+//    override fun onClick(v: View?) {
+//        when (v!!.id) {
+//            R.id.btnwisatalaam -> {
+//                var i: Intent
+//                i = Intent(activity, Menu::class.java)
+//                activity?.startActivity(i)
+//            }
+//            R.id.btnbooking -> {
+//                var i: Intent
+//                i = Intent(activity, Menu::class.java)
+//                activity?.startActivity(i)
+//            }
+//        }
+//    }
 
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -42,11 +46,17 @@ class Home : Fragment(), View.OnClickListener {
         super.onViewCreated(view, savedInstanceState)
         getSaldo("FSSnC6UKtwXtrzgDf8nozC8pHhYZfluoYHrt3v4ixdQuZBBRo5")
 
-//        btnwisatalaam.setOnClickListener {
-//            var i: Intent
-//            i= Intent(activity,Menu::class.java)
-//            activity?.startActivity(i)
-//        }
+        btnwisatalaam.setOnClickListener {
+            var i: Intent
+            i = Intent(activity, Menu::class.java)
+            activity?.startActivity(i)
+        }
+
+        cvisisaldo.setOnClickListener {
+            var i: Intent
+            i = Intent(activity, IsiSaldo::class.java)
+            activity?.startActivity(i)
+        }
 
     }
 
