@@ -1,6 +1,5 @@
 package com.lauwba.wisataproject
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -23,7 +22,7 @@ class Pesanan : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        getSaldouser("6285761990862")
+        getSaldouser("6282236447387")
     }
 
     private fun getSaldouser(key: String) {

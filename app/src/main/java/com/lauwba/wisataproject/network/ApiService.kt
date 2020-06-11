@@ -47,7 +47,7 @@ interface ApiService {
     @POST("Wisata/addWisata")
     fun doUpload(
         @Part foto: MultipartBody.Part,
-        @Part("nama_wisata") namawisata: RequestBody,
+        @Part("namawisata") namawisata: RequestBody,
         @Part("deskripsi") deskripsi: RequestBody,
         @Part("alamat") alamat: RequestBody,
         @Part("latitude") lat: RequestBody,
@@ -58,7 +58,7 @@ interface ApiService {
     @FormUrlEncoded
     @POST("Register/doRegister")
     fun register(
-        @Field("no-telp") noTelp: String?,
+        @Field("notelp") noTelp: String?,
         @Field("nama") nama: String?,
         @Field("alamat") alamat: String?,
         @Field("email") email: String?
@@ -67,7 +67,7 @@ interface ApiService {
     @FormUrlEncoded
     @POST("Register/getDetail")
     fun doLogin(
-        @Field("no-telp") noTelp: String
+        @Field("notelp") noTelp: String
     ): retrofit2.Call<ResponseUser>
 }
 

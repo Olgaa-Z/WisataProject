@@ -1,25 +1,35 @@
 package com.lauwba.wisataproject
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.DefaultItemAnimator
-import androidx.recyclerview.widget.LinearLayoutManager
-import com.lauwba.wisataproject.datamodel.listbank.ResponseListBank
 import com.lauwba.wisataproject.network.NetworkModule
 import com.lauwba.wisataproject.saldo.ResponseSaldo
-import kotlinx.android.synthetic.main.activity_list_bank.*
-import kotlinx.android.synthetic.main.home.*
 import kotlinx.android.synthetic.main.menu_saldo.*
 import retrofit2.Call
 import retrofit2.Response
 
-class Home : Fragment() {
+class Home : Fragment(), View.OnClickListener {
+
+    override fun onClick(v: View?) {
+        when (v!!.id) {
+            R.id.btnwisatalaam -> {
+                var i: Intent
+                i = Intent(activity, Menu::class.java)
+                activity?.startActivity(i)
+            }
+            R.id.btnbooking -> {
+                var i: Intent
+                i = Intent(activity, Menu::class.java)
+                activity?.startActivity(i)
+            }
+        }
+    }
+
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 //        activity?.title = getString(R.string.title_beranda)
@@ -31,16 +41,13 @@ class Home : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         getSaldo("FSSnC6UKtwXtrzgDf8nozC8pHhYZfluoYHrt3v4ixdQuZBBRo5")
-        btnwisatalaam.setOnClickListener {
-            var i: Intent
-            i= Intent(activity, Menu::class.java)
-            activity?.startActivity(i)
-        }
-        btncekharga.setOnClickListener {
-            var i: Intent
-            i= Intent(activity, Menu::class.java)
-            activity?.startActivity(i)
-        }
+
+//        btnwisatalaam.setOnClickListener {
+//            var i: Intent
+//            i= Intent(activity,Menu::class.java)
+//            activity?.startActivity(i)
+//        }
+
     }
 
     private fun getSaldo(key: String) {
