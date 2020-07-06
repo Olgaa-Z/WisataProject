@@ -20,8 +20,33 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
+        <activity android:name=".admin.RequestSaldoAdapter"></activity>
+        <activity android:name=".admin.RequestSaldo">
+
+        </activity>
+        <activity android:name=".admin.AdminActivity" />
+
+        <service
+            android:name=".admin.MyFirebaseMessagingServiceAdmin"
+            android:enabled="false"
+            android:exported="false" />
+        <service
+            android:name=".service.MyFirebaseServices"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
         <activity android:name=".scanner.ScannerActivity" />
-        <activity android:name=".gallery.Gallery" />
+        <activity android:name=".gallery.Gallery">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".gallery.DetailGallery" />
         <activity android:name=".gallery.GalleryAdapter" />
         <activity android:name=".video.ExoVideoPlayer" />
@@ -57,11 +82,7 @@
         <activity android:name=".VerificationAuth" />
         <activity android:name=".PhoneAuth" />
         <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <provider

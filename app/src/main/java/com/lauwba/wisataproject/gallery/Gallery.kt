@@ -21,6 +21,12 @@ class Gallery : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_gallery)
 
+//        recyclerView = findViewById(R.id.rvgallery)
+//
+//        val linearLayoutManager = LinearLayoutManager(this)
+//        linearLayoutManager.orientation = LinearLayoutManager.HORIZONTAL
+//        recyclerView.setLayoutManager(linearLayoutManager)
+
         list = mutableListOf()
         get_data_gallery().execute()
     }
@@ -57,8 +63,15 @@ class Gallery : AppCompatActivity() {
                         this@Gallery//buat dulu adpaterny
                     )
                 }
+//                rvgallery.layoutManager = LinearLayoutManager(this@Gallery)
+//                rvgallery.adapter = adapter
+//                val linearLayoutManager = LinearLayoutManager(this@Gallery)
                 rvgallery.layoutManager = LinearLayoutManager(this@Gallery)
                 rvgallery.adapter = adapter
+                (rvgallery.layoutManager as LinearLayoutManager).orientation =
+                    LinearLayoutManager.HORIZONTAL
+//                recyclerView.setLayoutManager(linearLayoutManager)
+
             }
             super.onPostExecute(result)
             pd?.dismiss()

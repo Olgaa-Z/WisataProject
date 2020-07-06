@@ -27,18 +27,26 @@
     </TextView>
 
     <TextView
-        android:text="Nominal Transfer (Rp)"
+        android:text="Nominal Request (Rp)"
         android:textColor="@color/hitam"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
     </TextView>
 
-    <EditText
+    <!--    <EditText-->
+    <!--        android:id="@+id/nominaltransfer"-->
+    <!--        android:hint="Contoh : 50.000"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content">-->
+    <!--    </EditText>-->
+
+    <me.abhinay.input.CurrencyEditText
         android:id="@+id/nominaltransfer"
-        android:hint="Contoh : 50.000"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-    </EditText>
+        android:layout_height="wrap_content"
+        android:hint="Contoh : 50.000"
+        android:inputType="number"
+        android:textSize="24sp" />
 
     <Button
         android:id="@+id/proses"

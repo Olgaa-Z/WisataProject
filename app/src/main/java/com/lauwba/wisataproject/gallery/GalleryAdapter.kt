@@ -13,6 +13,7 @@ import com.lauwba.wisataproject.Config
 import com.lauwba.wisataproject.R
 import kotlinx.android.synthetic.main.activity_gallery_adapter.view.*
 
+
 class GalleryAdapter(private val list: MutableList<GalleryModel>, private val context: Context) :
     RecyclerView.Adapter<GalleryAdapter.ViewHolder>() {
 

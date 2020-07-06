@@ -1,5 +1,6 @@
 package com.lauwba.wisataproject
 
+import android.content.ContextWrapper
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -22,7 +23,12 @@ class Pesanan : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        getSaldouser("6282236447387")
+//        getSaldouser("key")
+        val a = activity?.getSharedPreferences(Constant.PREFS_NAME, ContextWrapper.MODE_PRIVATE)
+            ?.getString(Constant.NO_TELP, "not set")
+
+        getSaldouser("$a")
+//          getSaldouser("$notelp")
     }
 
     private fun getSaldouser(key: String) {
