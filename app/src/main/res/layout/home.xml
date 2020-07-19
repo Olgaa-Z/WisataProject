@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<androidx.core.widget.NestedScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".Home">
+    android:layout_height="match_parent">
 
-    <include layout="@layout/menu_saldo" />
-
-    <androidx.core.widget.NestedScrollView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".Home">
+
+        <include layout="@layout/menu_saldo" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -289,28 +289,27 @@
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/rvgallery"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingLeft="20dp"
-                    android:scrollbars="horizontal">
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
 
                 </androidx.recyclerview.widget.RecyclerView>
 
             </RelativeLayout>
 
 
-            <!--            <include layout="@layout/menu_galeri_pilihan" />-->
+            <!--                        <include layout="@layout/menu_galeri_pilihan" />-->
 
-            <!--            <include layout="@layout/menu_referensi_wisata" />-->
+            <!--                        <include layout="@layout/menu_referensi_wisata" />-->
 
-            <!--            <include layout="@layout/menu_video_pilihan" />-->
+            <!--                        <include layout="@layout/menu_video_pilihan" />-->
 
-            <!--            <include layout="@layout/menu_referensi_wisata" />-->
+            <!--                        <include layout="@layout/menu_referensi_wisata" />-->
 
-            <!--            <include layout="@layout/menu_referensi_wisata" />-->
+            <!--                        <include layout="@layout/menu_referensi_wisata" />-->
 
         </LinearLayout>
-    </androidx.core.widget.NestedScrollView>
 
 
-</LinearLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

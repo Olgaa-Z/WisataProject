@@ -20,6 +20,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
+
         <activity android:name=".admin.RequestSaldoAdapter"></activity>
         <activity android:name=".admin.RequestSaldo">
 
@@ -41,11 +42,7 @@
 
         <activity android:name=".scanner.ScannerActivity" />
         <activity android:name=".gallery.Gallery">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".gallery.DetailGallery" />
         <activity android:name=".gallery.GalleryAdapter" />
@@ -82,7 +79,11 @@
         <activity android:name=".VerificationAuth" />
         <activity android:name=".PhoneAuth" />
         <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
 
         <provider
