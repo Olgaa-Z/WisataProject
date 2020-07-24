@@ -67,7 +67,13 @@
         <activity android:name=".Menu" />
         <activity
             android:name=".SplashScreen"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".Welcome"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
@@ -79,11 +85,7 @@
         <activity android:name=".VerificationAuth" />
         <activity android:name=".PhoneAuth" />
         <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <provider
