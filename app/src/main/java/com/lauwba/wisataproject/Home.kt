@@ -12,6 +12,8 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.lauwba.wisataproject.cariwisata.Menu
+import com.lauwba.wisataproject.content.Content
 import com.lauwba.wisataproject.gallery.GalleryAdapter
 import com.lauwba.wisataproject.gallery.GalleryModel
 import com.lauwba.wisataproject.network.NetworkModule
@@ -65,6 +67,12 @@ class Home : Fragment() {
         btnwisatalaam.setOnClickListener {
             var i: Intent
             i = Intent(activity, Menu::class.java)
+            activity?.startActivity(i)
+        }
+
+        btnbooking.setOnClickListener {
+            var i: Intent
+            i = Intent(activity, Content::class.java)
             activity?.startActivity(i)
         }
 

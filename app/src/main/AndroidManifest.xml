@@ -20,11 +20,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-
-        <activity android:name=".admin.RequestSaldoAdapter"></activity>
-        <activity android:name=".admin.RequestSaldo">
-
-        </activity>
+        <activity android:name=".content.Content"></activity>
+        <activity android:name=".content.DetailBerita" />
+        <activity android:name=".content.BeritaAdapter" />
+        <activity android:name=".cariwisata.DetailWisata" />
+        <activity android:name=".cariwisata.WisataAdapter" />
+        <activity android:name=".admin.RequestSaldoAdapter" />
+        <activity android:name=".admin.RequestSaldo" />
         <activity android:name=".admin.AdminActivity" />
 
         <service
@@ -41,9 +43,7 @@
         </service>
 
         <activity android:name=".scanner.ScannerActivity" />
-        <activity android:name=".gallery.Gallery">
-
-        </activity>
+        <activity android:name=".gallery.Gallery" />
         <activity android:name=".gallery.DetailGallery" />
         <activity android:name=".gallery.GalleryAdapter" />
         <activity android:name=".video.ExoVideoPlayer" />
@@ -64,7 +64,7 @@
         <activity android:name=".AdapterListbank" />
         <activity android:name=".ListBank" />
         <activity android:name=".Mutasi" />
-        <activity android:name=".Menu" />
+        <activity android:name=".cariwisata.Menu" />
         <activity
             android:name=".SplashScreen"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
@@ -84,9 +84,7 @@
         <activity android:name=".Register" />
         <activity android:name=".VerificationAuth" />
         <activity android:name=".PhoneAuth" />
-        <activity android:name=".MainActivity">
-
-        </activity>
+        <activity android:name=".MainActivity" />
 
         <provider
             android:name="androidx.core.content.FileProvider"
